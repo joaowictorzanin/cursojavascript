@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula02</title>
+</head>
+
+<style>
+    body{
+        font: normal 12pt arial;
+    }
+</style>
+
+<body>
+    <script>
+        // *OPERADORES ARITIMETICOS*
+        // 5 + 2 = 7 -> SOMA
+        // 5 - 2 = 3 -> SUBTRAÇÃO
+        // 5 * 2 = 10 -> MULTIPLICAÇÃO
+        // 5 / 2 = 2.5 -> DIVISÃO REAL
+        // 5 % 2 = 1 -> DIVISÃO INTEIRA (RESTO DA DIVISÃO)
+        // 5 ** 2 = 25 -> POTENCIA
+
+        // *ORDEM DE PRECEDENCIA*
+            // 1- () 
+            // 2- **
+            // 3- * / %
+            // 4- + -
+        
+        
+        var a = 5 + 3
+        var b = a % 5
+        var c = 5 * b ** 2
+        var d = 10 - a / 2
+        var e = 6 * 2 / d
+        var f = b % e + 4 / e
+
+        document.write(`O resultado da Op 01 é: ${a}`)
+        document.write(`<br>O resultado da Op 02 é: ${b}</br>`)
+        document.write(`O resultado da Op 03 é: ${c}`)
+        document.write(`<br>O resultado da Op 04 é: ${d}</br>`)
+        document.write(`O resultado da Op 05 é: ${e}`)
+        document.write(`<br>O resultado da Op 06 é: ${f}</br>`)
+
+        var n = 3
+        n = n + 4 // n deixa de valer 3 e passa a valer 7
+        n = n - 5 // n deixa de valer 7 e passa a valer 2
+        n = n * 4 // n deixa de valer 2 e passa a valer 8
+        n = n / 2 // n deixa de valer 8 e passa a valer 4
+        n = n ** 2 // n deixa de valer 4 e passa a valer 16
+        n = n % 5 // n deixa de valer 16 e passa a valer 1
+        
+        // *MODO SIMPLIFICADO*
+        // n += 4
+        // n -= 5
+        // n *= 5
+        // n /= 2
+        // n **= 2
+        // n %= 5
+
+        document.write(`Exemplo de mudança de valor: ${n}`)
+
+        //*INCREMENTO*
+        var x = 5
+        x +=1
+        x -= 1
+
+        // *MODO SIMPLIFICADO*
+        // x ++ (Pós Incremento) ou ++ x (Pré Incremento)
+        // x -- (Pós Incremento) ou -- x (Pré Incremento)
+
+        document.write(`<br>Valor do Incremento: ${x}</br>`)
+
+
+    </script>
+</body>
+</html>
