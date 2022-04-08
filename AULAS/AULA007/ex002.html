@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLICIA FEDERAL</title>
+</head>
+<style>
+    body{
+        font: normal 11pt arial;
+        background: rgb(0, 2, 95);
+        color: white;
+    }
+    h1{
+        color: yellow;
+    }
+</style>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    Digite o pais que você nasceu: <input type="text" name="pais" id="nac">
+    <input type="button" value="Verificar" onclick="vfc()">
+    <div id="ident"></div>
+    <script>
+        var pais = window.document.getElementById('nac')
+        var ident1 = window.document.getElementById('ident')
+        function vfc() {
+            var res = (pais.value)
+            if (res == 'Brasil') {
+                ident1.innerHTML = `<p>Você é <strong>Brasileiro</strong> seja bem-vindo!</p>`
+                ident1.style.color = 'lightgreen'
+            } else {
+                ident1.innerHTML = `<p>Você é do pais <strong>${res}</strong>, por favor apresente a documentação...</p>`
+                ident1.style.color = 'lightcoral'
+            }        
+    }
+
+
+    </script>
+
+</body>
+</html>
