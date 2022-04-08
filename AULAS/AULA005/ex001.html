@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(66, 66, 66);
+            color: rgb(255, 255, 255);
+            font: normal 12pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <P class="pag01">Aqui vai o resultado</P>
+    <p>aprendendo a usar <strong>DOM</strong> em javascript</p>
+    <div>Clique aqui</div>
+    <div id="msg1">Clique aqui</div>
+    <div name="msg2">Clique aqui</div>
+    <div class="msg3">Clique aqui</div>
+    <script>
+        window.document.write(window.document.charset) //mostra o tipo de caracteres
+        window.document.write('<br>Joao Bundão</br>') // escreve algo na tela
+        window.document.write(window.navigator.appName) // mostra o navegador utilziado
+        window.document.write(`<br>${window.document.URL}</br>`) //mostra a URL
+
+
+        // *SELECIONANDO ELEMENTOS POR MARCA*
+        // utiliza-se o .getElementsByTagName
+
+        var tg1 = window.document.getElementsByTagName('p')[0] // Seleciona o elemento nesse caso o paragrafo 1 que é representado por 0
+        window.document.write('Está escrito assim: ' + tg1.innerText) // escreve o que tem no paragrafo selecionado
+
+        var tg2 = window.document.getElementsByTagName('h1')[0]
+        tg2.style.color = 'orange' //altera a cor do texto
+
+        var tg3 = window.document.getElementsByTagName('p')[1]
+        //window.alert(tg3.innerText)
+        //window.alert(tg3.innerHTML)//escreve com as tags de strong
+
+        // *SELECIONANDO ELEMENTOS POR ID*
+        // utiliza-se o get.ElementById()
+
+        var id1 = window.document.getElementById('msg1')
+        id1.innerText = ('Não Clique aqui') //modificando o texto da div
+
+        // *SELECIONANDO ELEMETOS POR NOME*
+        // utiliza-se get.ElementsByName()
+
+        var nm1 = window.document.getElementsByName('msg2')[0] 
+        nm1.style.background = 'green' // modificando o background da div
+
+        // *SELECIONANDO ELEMENTOS POR CLASSE*
+        // utiliza-se .getElementsByClassName()
+
+        var pag1 = window.document.getElementsByClassName('pag01')[0]
+        pag1.style.color = 'blue'
+
+        // *SELECIONANDO ELEMNTOS POR SELETOR*
+        // utiliza-se .querySelector() e .querySelectorAll()
+
+        var sl1 = window.document.querySelector('div#msg1')//quando é ID se utiliza #
+        var sl2 = window.document.querySelector('div.msg3')//quando é CLASS se utilzia .
+        sl1.style.color = 'red'
+        sl2.innerText = ('Testando querySelector')
+
+    </script>
+    <div id="teste">
+        <script>
+            window.document.write('Testando loucuras do mundo a fora')
+        </script>
+    </div>
+
+    <script>
+        var teste = window.document.getElementById('teste')
+        teste.style.color = 'gold'
+    </script>
+
+    <div id="teste2">
+        <script>
+        window.document.write(teste.innerText + ': este teste deu certo!')
+        </script>
+    </div>
+
+    <script>
+        var teste2 = window.document.getElementById('teste2')
+        teste2.style.color = 'lightgreen'
+    </script>
+
+</body>
+</html>
