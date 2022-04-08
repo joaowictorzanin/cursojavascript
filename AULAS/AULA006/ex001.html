@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 10</title>
+<style>
+    body{
+        font: normal 12pt arial; 
+    }
+    div#area{
+        background-color: gray;
+        color: orange;
+        width: 300px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+    }
+    div#area2{
+        background-color: brown;
+        color: white;
+        width: 300px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+
+    }
+
+</style>
+</head>
+
+<body>
+   <h1>Eventos DOM</h1>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <div><br></br></div>
+
+    <div id="area2">
+        Interaja...
+    </div>
+
+    <script> //interagindo com os eventos dento do HTMl
+        var area = window.document.getElementById('area') // Colocar a var para fora das function para se tornar global
+
+        function clicar() {
+            area.innerText = 'Você clicou pique!'
+            area.style.background = 'green'
+            area.style.color = 'white'
+        }
+
+        function entrar(){
+            area.innerText = 'Você entrou cachorro!'
+        }
+
+        function sair(){
+            area.innerText = 'Você saiu para adquirir recursos'
+            area.style.background = 'Gray'
+            area.style.color = 'orange'
+        }
+
+    </script>
+
+    <script> // Interagindo com os eventos dentro do JavaScript
+        var area2 = window.document.getElementById('area2')
+
+        area2.addEventListener('click', clicar2) // Adicionar o evento e a forma de chamar ele
+        area2.addEventListener('mouseenter', entrar2)
+        area2.addEventListener('mouseout', sair2)
+
+        function clicar2(){
+            area2.innerText = 'Você clicou pique!'
+            area2.style.background = 'blue'
+        }
+
+        function entrar2(){
+            area2.innerText = 'Você entrou cachorro!'
+        }
+
+        function sair2(){
+            area2.innerText = 'Você saiu para adquirir recursos'
+            area2.style.background = 'brown'
+        }
+
+
+    // *EVENTOS COM MOUSE*
+        // mouseenter -> Quando ele entra na div
+        // mousemove -> Quando ele se move dentro da div
+        // mousedown -> Quando clica e segura
+        // mouseup -> Quando solta o botão
+        // click -> Quando clica e solta o mouse
+        // mouseout -> Quando ele sair da div
+
+    </script>
+    
+</body>
+</html>
