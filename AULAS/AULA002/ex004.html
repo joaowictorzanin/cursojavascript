@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+    <style>
+        body{
+            font: normal 12pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        var salario = Number.parseFloat(window.prompt('Digite o seu Sálario utilizando o ponto ex: 1900.00'))
+        document.write(`Seu nome é: ${nome}`)
+    </script>
+    </h1>
+    <p>
+        <Script>
+            document.write(`Ele tem ${nome.length} letras`)
+            document.write(`<br> Ele maisculo fica ${nome.toUpperCase()}</br>`)
+            document.write(`Ele minusculo fica ${nome.toLowerCase()}`)
+            // s.length == quantas caracteres a string tem
+            // s.toUpperCase() == tudo para MAISUCULAS
+            // s.toLowerCase() == tudo para minusculas
+
+            document.write(`<br> Seu salario é de ${salario.toFixed(2).replace('.' , ',')}</br>`)
+            document.write(`Mudando para R$ fica da seguinte forma ${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+            // n.toFixed() == utiliza para dizer quantas casa decimais terá
+            // n.toFixed().replace('.' , ',') == utiliza para trocar "." por ","
+            // n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) == para transformar em REAIS
+        </Script>
+    </p>
+</body>
+</html>

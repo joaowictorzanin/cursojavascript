@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+    <style>
+        body{
+            background-color: rgb(151, 132, 255); /* Comentar em CSS */
+            color: white;
+            font: normal 16pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p> <!-- Como comentar em HTML-->
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um número:')) //window.prompt retorna sempre como sting
+       var n2 = parseInt(window.prompt('Digite outro número:'))
+       // *CONVERSÃO DE STRING PARA NUMERO*
+        //Number.parseInt(n) utilziado para numeros inteiros
+        //Number.parseFloar(n) utilizado para numeros com casa decimais/flutuantes
+        //ambos utilizado para alterar string para number
+        //Modo generico utiliza - se Numeber(n)
+
+        // *CONVERSÃO DE NUMERO PARA STRING*
+        //String(n)
+        //n.toString()
+        //ex String(soma) ou soma.toString()
+
+       var soma = n1 + n2 
+       window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é ' + soma)
+       window.alert(`A soma entre ${n1} e ${n2} é ${soma}`)
+       // o "+" pode servir para concatenação ou para adição
+       // number + number para adição
+       // string + string para concatenação
+    </script>
+</body>
+</html>
