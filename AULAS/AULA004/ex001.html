@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 08</title>
+</head>
+
+<style>
+    body{
+        font: normal 12pt arial;
+    }
+</style>
+
+<body>
+    <script>
+        //*OPERADORES RELACIONAIS*
+        // 5 > 2 (5 maior que 2) -> TRUE
+        // 7 < 4 (7 menor que 4) -> FALSE
+        // 8 >= 8 (8 maior ou iual a 8) -> TRUE 
+        // 9 <= 7 (9 menor ou igual a 7) -> FALSE
+        // 5 == 5 (5 igual a 5) -> TRUE
+        // 4 != 4 (4 diferente de 4) -> FALSE
+
+        var op1 = 5 > 2
+        var op2 = 7 < 4
+        var op3 = 8 >= 8
+        var op4 = 9 <= 7
+        var op5 = 5 == 5
+        var op6 = 4 != 4
+
+        document.write(`5 > 2 é: ${op1}`)
+        document.write(`<br>7 < 4 é: ${op2}</br>`)
+        document.write(`8 >= 8 é: ${op3}`)
+        document.write(`<br>9 <= 7 é: ${op4}</br>`)
+        document.write(`5 == 5 é: ${op5}`)
+        document.write(`<br>4 != 4 é: ${op6}</br>`)
+
+        // *OPERADORES IDENTIDADE*
+        // 5 == 5 TRUE
+        // 5 == '5' TRUE -> POIS ELE TESTA A SE É O MESMO VALOR NÃO SE É STRING OU OUTRO TIPO DE VARIAVEL
+        // 5 === '5' FALSE -> POIS ELE TESTA SE É O MESMO VALOR E O MESMO TIPO DE VARIAVEL
+        // 5 === 5 TRUE -> POIS UM É EXATAMENTE IGUAL AO OUTRO
+
+        var id1 = 5 == 5
+        var id2 = 5 == '5'
+        var id3 = 5 === '5'
+        var id4 = 5 === 5
+
+        document.write(`5 == 5 é: ${id1}`)
+        document.write(`<br>5 == '5' é: ${id2}</br>`)
+        document.write(`5 === '5' é: ${id3}`)
+        document.write(`<br>5 === 5 é: ${id4}</br>`)
+
+        //*OPERADORES LÓGICOS*
+        // ! -> (NÃO) NEGAÇÃO 
+        // $$ -> (E) CONJUNÇÃO 
+        // || -> (OU) DISJUNÇÃO 
+
+        // *NEGAÇÃO*
+        // ! -> true -> false
+        // ! -> false -> true
+
+        // *CONJUNÇÃO*
+        // TRUE && TRUE -> true
+        // TRUE && FALSE -> false
+        // FALSE && TRUE -> false
+        // FALSE && FALSE -> false
+
+        // *DISJUNÇÃO*
+        // TRUE || TRUE -> true
+        // TRUE || FALSE -> true
+        // FALSE || TRUE -> true
+        // FALSE || FALSE -> false
+
+        var lg1 = 5
+        var lg2 = 3
+        var lg3 = 6
+        var lg4 = 4
+
+        lgr1 = lg1 >= lg3 && lg4 != lg2
+        lgr2 = lg2 == lg1 || lg4 <= lg3
+        lgr3 = !( lg1 > lg3 || lg4 < lg2)
+
+        document.write(`5 >= 6 e 4 != 3 então é: ${lgr1}`)
+        document.write(`<br>Se 3 == 5 ou 4 <= 6 então é: ${lgr2}</br>`)
+        document.write(`Se não 5 > 6 ou 4 < 3 então é: ${lgr3}`)
+
+        // * ORDEM DE PRECEDENCIA*
+        // 1 -> (), %, **, *, /, + e - (ARITIMETICOS)
+        // 2 -> <, >, <=, >=, ==, != (RELACIONAIS)
+        // 3 -> ! 
+        // 4 -> &&
+        // 5 -> ||
+
+        // *OPERADOR TERNARIO*
+        // ? E : -> dentro da mesma expressão
+
+        var tn = Number.parseFloat(window.prompt('Digite sua média: '))
+        
+        document.write(`<br>Você está: ${tn >= 7.5 ? 'Aprovado' : 'Reprovado'}</br> A média minima é de 7.5 e sua média foi: ${tn}`)
+
+    </script>
+    
+</body>
+</html>
